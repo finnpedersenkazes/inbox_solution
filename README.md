@@ -1,5 +1,7 @@
 # Inbox
 
+The purpose of this document is to give you a step by step approach to solve the following exercise from Le Wagon:
+
 04-Front-End/02-CSS-components/03-Inbox
 
 ![image alt text](images/image_0.png)
@@ -34,13 +36,13 @@ We start by inserting the follow lines in our header: (we will remove them later
       * {
         border: 1px solid black;
       }
-    </style>    
+    </style>
   </head>
 ```
 
-You can press control + option + S to open Safari on the Mac and control + option + C to open Chrome. V should open Firefox. 
+You can press control + option + S to open Safari on the Mac and control + option + C to open Chrome. V should open Firefox.
 
-Now we have borders everywhere and we can see our boxes and divs. 
+Now we have borders everywhere and we can see our boxes and divs.
 
 ![image alt text](images/image_3.png)
 
@@ -48,29 +50,29 @@ Now we have borders everywhere and we can see our boxes and divs.
 
 We need two tabs. For example "Traveling", "Hosting", but it could also be "Unread", "Read".
 
-On the line 
+On the line
 ```html
 <!-- Code your tabs here -->
 ```
 
-Tap Command + Enter. This should give you a new blank line just after it. 
+Tap Command + Enter. This should give you a new blank line just after it.
 
 We need a class "tabs" to contain both tabs and we need a class "tab" to target each tab.
 
-Type the following and followed by a click on the Tab key. 
+Type the following and followed by a click on the Tab key.
 ```html
 .tabs>a.tab*2
 ```
-This should unfold to this: 
+This should unfold to this:
 ```html
 <div class="tabs">
   <a href="" class="tab"></a>
   <a href="" class="tab"></a>
 </div>
 ```
-Now give each tab a text and put a # as the link to the href attribute. 
+Now give each tab a text and put a # as the link to the href attribute.
 
-Make sure it looks like this. 
+Make sure it looks like this.
 
 ```html
 <div class="tabs">
@@ -81,11 +83,11 @@ Make sure it looks like this.
 
 ![image alt text](images/image_5.png)
 
-We can see that our tabs are hyperlinks, since we would like to be able to click on them and make something happen. 
+We can see that our tabs are hyperlinks, since we would like to be able to click on them and make something happen.
 
 # Step 3 - Putting style on our Tabs
 
-Start by adding the reference to the tabs and tab classes in the tabs.css file. 
+Start by adding the reference to the tabs and tab classes in the tabs.css file.
 
 ```css
 .tabs {
@@ -93,12 +95,12 @@ Start by adding the reference to the tabs and tab classes in the tabs.css file.
 }
 
 .tab {
-  
+
 }
 ```
 
 
-We want out tabs to look like real tabs and thus to have some space around the text. We do this with padding. Here is a suggestion. 
+We want out tabs to look like real tabs and thus to have some space around the text. We do this with padding. Here is a suggestion.
 
 ```css
 .tab {
@@ -113,11 +115,11 @@ We want out tabs to look like real tabs and thus to have some space around the t
 
 ![image alt text](images/image_8.png)
 
-The result is a bit strange, since the div surrounding our two buttons has not taken the padding of the buttons into account. We do this by making the tabs div a flexbox.   
+The result is a bit strange, since the div surrounding our two buttons has not taken the padding of the buttons into account. We do this by making the tabs div a flexbox.
 
-Make .tabs a flexbox by adding the following line to the .tabs style. 
+Make .tabs a flexbox by adding the following line to the .tabs style.
 ```css
-display: flex; 
+display: flex;
 ```
 *Note: You don't even need space-between or align-items here because the tabs already have the same height. We might remove the display: flex later.*
 
@@ -134,11 +136,11 @@ display: flex;
 }
 ```
 
-Now it looks a bit better because the tabs div surrounds the buttons. 
+Now it looks a bit better because the tabs div surrounds the buttons.
 
 ![image alt text](images/image_10.png)
 
-Now let's get some background color on the tabs. One will be active, simulating that we have clicked on it and is looking on the corresponding emails. 
+Now let's get some background color on the tabs. One will be active, simulating that we have clicked on it and is looking on the corresponding emails.
 
 We need a way to see which one is active, so we add an active class to the first one.
 
@@ -149,7 +151,7 @@ We need a way to see which one is active, so we add an active class to the first
 </div>
 ```
 
-We add the corresponding selectors in the css file and at the same we will give the two tabs some background color using the below gray scale. 
+We add the corresponding selectors in the css file and at the same we will give the two tabs some background color using the below gray scale.
 
 ![image alt text](images/image_12.png)
 
@@ -173,12 +175,12 @@ We add the corresponding selectors in the css file and at the same we will give 
 
 ![image alt text](images/image_14.png)
 
-To remove the hyperlink look of the tab text, we add the following lines to the tabs selector. 
+To remove the hyperlink look of the tab text, we add the following lines to the tabs selector.
 ```css
   text-decoration: none;
   color: black;
 ```
-And the following line to the active tab 
+And the following line to the active tab
 ```css
   color: white;
 ```
@@ -206,13 +208,13 @@ And the following line to the active tab
 
 ![image alt text](images/image_16.png)
 
-We are now going to remove the border lines to see the result so far. 
+We are now going to remove the border lines to see the result so far.
 
 ![image alt text](images/image_17.png)
 
-From this point on it is decoration. Play around with opacity, colors, borders, margins. 
+From this point on it is decoration. Play around with opacity, colors, borders, margins.
 
-By adding some rounding to corners and some margin around the text, you get this. 
+By adding some rounding to corners and some margin around the text, you get this.
 
 ```css
   border-radius: 5px;
@@ -220,7 +222,7 @@ By adding some rounding to corners and some margin around the text, you get this
 ```
 ![image alt text](images/image_18.png)
 
-To add a hover effect, add the following to your tabs.css file. 
+To add a hover effect, add the following to your tabs.css file.
 
 ```css
 .tab:hover {
@@ -232,7 +234,7 @@ To add a hover effect, add the following to your tabs.css file.
 
 *To be written.*
 
-When you do this part of the exercise, keep the boxes and aime for something like this. I hope this helps. Feedback is welcome. 
+When you do this part of the exercise, keep the boxes and aime for something like this. I hope this helps. Feedback is welcome.
 
 ![image alt text](images/image_19.jpeg)
 
